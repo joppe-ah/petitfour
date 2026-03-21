@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* ── Explicitly tell Tailwind v4 where to scan for class names ── */
+@source "./app/**/*.ts";
+@source "./app/**/*.html";
+
 /* ── Class-based dark mode for Tailwind v4 ── */
 @custom-variant dark (&:where(.dark, .dark *));
 
