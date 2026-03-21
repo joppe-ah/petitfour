@@ -1,0 +1,38 @@
+<div class="p-6">
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">Cookbook</h1>
+    <button
+      class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors font-medium"
+    >
+      + Add Recipe
+    </button>
+  </div>
+
+  @if (loading$ | async) {
+    <div class="text-center py-12 text-gray-500">Loading recipes…</div>
+  } @else {
+    @let recipes = recipes$ | async;
+    @if (!recipes || recipes.length === 0) {
+      <div class="text-center py-12 text-gray-400">
+        <div class="text-5xl mb-3">🍽️</div>
+        <p>No recipes yet. Add your first one!</p>
+      </div>
+    } @else {
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        @for (recipe of recipes; track recipe.id) {
+          <div class="p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <h2 class="font-semibold text-lg text-gray-800">{{ recipe.name }}</h2>
+            <p class="text-gray-500 text-sm mt-1">{{ recipe.description }}</p>
+            <div class="flex flex-wrap gap-1 mt-3">
+              @for (tag of recipe.tags; track tag) {
+                <span class="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full">
+                  {{ tag }}
+                </span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  }
+</div>
