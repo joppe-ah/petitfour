@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 --port 4200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:mobile": "ng serve --host 0.0.0.0 --port 4200 --disable-host-check",
+    "qr": "node src/scripts/show-qr.js"
   },
   "prettier": {
     "printWidth": 100,
@@ -23,6 +25,7 @@
   "private": true,
   "packageManager": "npm@11.6.2",
   "dependencies": {
+    "@angular/cdk": "^21.2.3",
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
     "@angular/core": "^21.0.0",
@@ -36,6 +39,9 @@
     "@ngrx/store": "^21.0.1",
     "@ngrx/store-devtools": "^21.0.1",
     "@supabase/supabase-js": "^2.99.3",
+    "chart.js": "^4.5.1",
+    "jspdf": "^4.2.1",
+    "ngrx-store-localstorage": "^20.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -46,6 +52,7 @@
     "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/vite": "^4.2.2",
     "jsdom": "^27.1.0",
+    "qrcode": "^1.5.4",
     "tailwindcss": "^4.2.2",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

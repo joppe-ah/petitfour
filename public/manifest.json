@@ -1,0 +1,22 @@
+{
+  "name": "PetitFour",
+  "short_name": "PetitFour",
+  "description": "Your personal family app",
+  "theme_color": "#1D9E75",
+  "background_color": "#fafaf9",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

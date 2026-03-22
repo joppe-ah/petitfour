@@ -33,7 +33,8 @@ export class TabBarComponent {
   tabs: TabItem[] = [
     { path: '/dashboard', label: 'Home', icon: '⌂' },
     { path: '/cookbook', label: 'Cookbook', icon: '◎' },
+    { path: '/planner', label: 'Planner', icon: '◫' },
     { path: '/money', label: 'Money', icon: '◈' },
-    { path: '/family', label: 'Family', icon: '◉' },
+    { path: '/padel', label: 'Padel', icon: '🎾' },
   ];
 }

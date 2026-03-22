@@ -66,6 +66,13 @@ export class DashboardComponent {
       accent: 'amber',
     },
     {
+      path: '/padel',
+      icon: '◎',
+      title: 'Padel',
+      description: 'Matches & leaderboard',
+      accent: 'teal',
+    },
+    {
       path: '/family',
       icon: '◉',
       title: 'Family',
